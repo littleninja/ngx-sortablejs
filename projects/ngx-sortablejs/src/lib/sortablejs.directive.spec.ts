@@ -10,14 +10,14 @@ describe('SortablejsDirective', () => {
       </div>
     `,
   })
-  class TestComponent1 {
+  class TestComponent1Component {
     items = [1, 2, 3, 4, 5];
   }
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [
-        TestComponent1,
+        TestComponent1Component,
       ],
       imports: [
         SortablejsModule,
@@ -26,7 +26,7 @@ describe('SortablejsDirective', () => {
   }));
 
   it('should create', () => {
-    const fixture = TestBed.createComponent(TestComponent1);
+    const fixture = TestBed.createComponent(TestComponent1Component);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
